@@ -1,0 +1,25 @@
+{
+  "name": "simple365",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@vant/weapp": "^1.9.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yujie-cheng/simple365.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yujie-cheng/simple365/issues"
+  },
+  "homepage": "https://github.com/yujie-cheng/simple365#readme"
+}

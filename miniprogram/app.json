@@ -1,0 +1,21 @@
+{
+  "pages":[
+    "pages/home/index",
+    "pages/logs/logs"
+  ],
+  "entryPagePath": "pages/home/index",
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "365攒钱记录",
+    "navigationBarTextStyle":"black"
+  },
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-cell-group": "@vant/weapp/cell-group/index"
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,70 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <!-- <block wx:if="{{!nickName}}"> -->
+    <block>
+      <view class="userinfo-avatar">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <!-- <open-data type="userNickName"></open-data> -->
+    </block>
+  </view>
+  <van-icon
+    name="exchange"
+    custom-style="margin-bottom: 10px;margin-top: 10px;"
+    bind:click="changeButton"
+    color="{{showLoginButton ? '#679bcc' : '#dc7f89'}}"
+  />
+  <view class="login-field">
+    <van-cell-group class="login-field-group">
+      <van-field
+        model:value="{{ nickName }}"
+        placeholder="请输入昵称"
+        error-message="{{showNameErr ? '此昵称已存在' : ''}}"
+        error-message-align="center"
+        input-align="center"
+        right-icon="search"
+        disabled="{{loginLoading || registerLoading}}"
+        bind:click-icon="getUserProfile"
+      />
+      <van-field
+        model:value="{{ passWord }}"
+        placeholder="请输入密码"
+        input-align="center"
+        disabled="{{loginLoading || registerLoading}}"
+        right-icon="{{showPass ? 'eye-o' : 'closed-eye'}}"
+        bind:click-icon="clickIcon"
+        error-message="{{showPasswordErr ? '密码错误哦' : ''}}"
+        error-message-align="center"
+        type="{{showPass ? 'text' : 'password'}}"
+      />
+    </van-cell-group>
+    <view class="login-field-button">
+      <van-button
+        wx:if="{{showLoginButton}}"
+        type="primary"
+        bind:click="userLogin"
+        block
+        loading="{{loginLoading}}"
+        loading-text="登陆中"
+        color="#536e90"
+      >
+        登陆
+      </van-button>
+      <van-button
+        wx:else
+        type="primary"
+        bind:click="userRegister"
+        block
+        loading="{{registerLoading}}"
+        loading-text="注册中"
+        color="#e69da3"
+      >
+        注册
+      </van-button>
+    </view>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto" style="color: {{showLoginButton ? '#758a97' : '#949192'}}">种一棵树的最好时机就是当下</text>
+  </view>
+</view>
