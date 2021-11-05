@@ -33,3 +33,19 @@
 
 .login-field>.login-field-group>.login-field-right-icon {
 }
+
+.content-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.content-container>.image>image{
+  position: absolute;
+  bottom: 20rpx;
+  height: 700rpx;
+  width: 650rpx;
+}

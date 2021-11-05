@@ -92,8 +92,8 @@ Page({
 
   // 改变button文字
   changeButton() {
-    const { showLoginButton } = this.data
-    this.setData({showLoginButton: !showLoginButton})
+    const { showLoginButton, registerLoading, loginLoading } = this.data
+    if (!(registerLoading || loginLoading)) this.setData({showLoginButton: !showLoginButton})
   },
 
   observers: {
